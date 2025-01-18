@@ -1,0 +1,31 @@
+<h1> Data Binding In Angular </h1>
+
+<div> Ram is {{ isActive}}</div>
+
+<input type="text" value="{{courceName}}">
+
+<br>
+<hr>
+<!-- Property Binding -->
+<input type="{{inputType}}">
+<!-- Attribute Binding -->
+<input [type]="inputType"> 
+
+<Button (click)="showMessage( 'Hello World !!!!')"> Click  me to Show  message</Button>
+
+<button (click)="changeCourceName()"> Change Cource Name</button>
+
+<hr>
+
+<input type="text" [(ngModel)]="courceName">
+
+<hr>
+<select [(ngModel)]="stateName">
+    <option value="">Select</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Goa">Goa</option>
+    <option value="Massachusetts">Massachusetts</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Other">Other</option>
+</select>
