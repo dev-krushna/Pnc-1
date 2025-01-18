@@ -1,0 +1,48 @@
+<h1>Structural Directive</h1>
+
+<div class="container" *ngIf="isAtive">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae impedit voluptates eos porro perspiciatis
+        doloribus voluptatibus explicabo incidunt quas doloremque.</p>
+</div>
+
+<button (click)="funHide()"> Hide</button>
+<button (click)="funShow()"> Show</button>
+
+
+<hr>
+<hr>
+
+<div *ngIf="isOpen" [ngClass]="divStyle">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae impedit voluptates eos porro perspiciatis
+        doloribus voluptatibus explicabo incidunt quas doloremque.</p>
+</div>
+<button (click)="addStyle()"> Add Style</button>
+
+<button (click)="toggleme()">Toggle
+</button>
+
+<hr>
+<hr>
+
+<div class="container" *ngIf="num1 > num2">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae impedit voluptates eos porro perspiciatis
+        doloribus voluptatibus explicabo incidunt quas doloremque.</p>
+</div>
+
+<input type="text" name="First NO " [(ngModel)]="num1" id="">
+<input type="text" name="Second NO " [(ngModel)]="num2" id="">
+
+<hr>
+
+<div  *ngFor="let city of cityArray">
+    <ul>
+        <li>{{city}}</li>
+    </ul>
+</div>
+
+<div>
+    <select>
+        <option *ngFor="let city of cityArray">{{city}}</option>
+    </select>
+</div>
+<h1> hello</h1>
